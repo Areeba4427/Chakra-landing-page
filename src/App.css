@@ -1,38 +1,210 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+}
+
 .App {
+  text-align: center;
+  font-size: 19px;
+  color:#626262;
+
+}
+
+.hero-section {
+  color: white;
+}
+.hero-section h1{
+  font-size: 30px;
+  padding: 0;
+}
+.hero-section p{
+  font-size: 20px;
+  font-weight: 500;
+}
+.video-section {
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* chakra section */
+.chakra-section {
+  background: #EEEEEE;
+  margin:20px 0px;
+  padding: 20px;
+}
+
+.chakra-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.chakra-grid div {
+  background: transparent;
+  padding: 20px;
+}
+
+.chakra-phases h2{
+  font-size: 48px;
+  color:#333333;
+}
+
+
+.chakra-image{
+  width: 45%;
+}
+
+.chakra-sec {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  width: 70%;
+  margin: 0 auto; /* Optional: Center the container itself if it's not full width */
+}
+
+.chakra-head{
+  color:#333333;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.025rem;
+}
+
+/* Hero */
+
+.header {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-section {
+  padding: 20px;
+  position: relative;
+  background-image: url('https://storage.mlcdn.com/account_image/1013434/vAqsLgVkDbh0MDheynlLH0z5Jjou6mLBH8Nw2N2G.png');
+  background-size: cover;
+  background-position: center; 
+  opacity: 1;
+  padding: 2% 0; 
+  height: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.second-hero{
+  padding: 20px;
+  position: relative;
+  background-image: url('https://storage.mlcdn.com/account_image/1013434/Aqngt0shhhp974HBQV81wHzaEuDIPyyBDe2v6zyW.png');
+  background-size: cover;
+  opacity: 1;
+  padding: 2% 0; 
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-image {
+  padding-top: 50px;
+  width: 27%;
+  object-fit: cover; /* Makes sure the image covers the area nicely */
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Make text stand out */
+}
+.hero-section p {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.bold{
+  font-weight: 600;
+}
+.video-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff; /* Add a background color */
+}
+
+.text-section {
+  width: 70%;
+  margin: 0 auto; /* Centers the entire section horizontally */
+  text-align: center; /* Centers the text inside the <p> tags */
+}
+
+.text-section p {
+  margin-bottom: 16px; /* Optional: Adds space between paragraphs */
+  font-size: 1.3rem;
+}
+
+/* SectionComponent.css */
+/* SectionComponent.css */
+.section-component {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  margin-bottom: 40px;
+  width: 80%;
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+.image-container {
+  flex: 1;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.text-container {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.text-container h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+
+/* Footer section */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertical centering */
+  padding: 20px;
+  position: relative;
+  background-image: url('https://storage.mlcdn.com/account_image/1013434/IOFzzRBhIXFuHu1FngSqHakzKOxJqNmc0Xl9q3I0.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  height: 600px;
+}
+
+.footer-p {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; /* Vertical centering */
+  align-items: center; /* Horizontal centering */
+  max-width: 60%;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-section .footer-p p {
+  font-size: 30px;
+  color: #f9f9f9;
 }
