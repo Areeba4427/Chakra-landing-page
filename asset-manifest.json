@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/chakra-landing-page/static/css/main.2a325cbd.css",
+    "main.js": "/chakra-landing-page/static/js/main.6631042f.js",
+    "static/media/header.webp": "/chakra-landing-page/static/media/header.3a61fb88e3aa6cab9cf9.webp",
+    "index.html": "/chakra-landing-page/index.html",
+    "main.2a325cbd.css.map": "/chakra-landing-page/static/css/main.2a325cbd.css.map",
+    "main.6631042f.js.map": "/chakra-landing-page/static/js/main.6631042f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a325cbd.css",
+    "static/js/main.6631042f.js"
+  ]
+}
