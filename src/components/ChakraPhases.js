@@ -25,10 +25,16 @@ function ChakraPhases({ userData }) {
   return (
     <section className="chakra-phases">
       <h2>Your Personal Chakra Phases:</h2>
+      <img
+              src={'https://storage.mlcdn.com/account_image/1013434/aoFfhrlSt6aMo2SPKDxEuWuajxBcVRrpN0bzu0rI.png'}
+              className="chakra-image-main"
+            />
+      
       <div className="chakra-grid">
-        {/* First Chakra Phase: 0-27 Years */}
+       
+       
         <div className="chakra-phase">
-          <h3 className='chakra-head'>0-27 Years Old - {userData.first_chakra} - {userData.chakra_title_0_27}</h3>
+          <h3 className='chakra-head'>0-27 Years Old - Chakra Number  {userData.first_chakra} - {userData.chakra_title_0_27}</h3>
           <div className='chakra-sec'>
             <img
               src={userData.chakra_image_0_27}
@@ -36,8 +42,6 @@ function ChakraPhases({ userData }) {
               className="chakra-image"
             />
             <div>
-              <h4>{userData.chakra_title_0_27}</h4>
-
               <p>{userData.chakra_description_0_27}</p>
             </div>
           </div>
@@ -45,7 +49,7 @@ function ChakraPhases({ userData }) {
 
         {/* Second Chakra Phase: 27-54 Years */}
         <div className="chakra-phase">
-          <h3 className='chakra-head'>27-54 Years Old - {userData.second_chakra} - {userData.chakra_title_27_54}</h3>
+          <h3 className='chakra-head'>27-54 Years Old - Chakra Number {userData.second_chakra} - {userData.chakra_title_27_54}</h3>
           <div className='chakra-sec'>
             <img
               src={userData.chakra_image_27_54}
@@ -53,8 +57,6 @@ function ChakraPhases({ userData }) {
               className="chakra-image"
             />
             <div>
-              <h4>{userData.chakra_title_27_54}</h4>
-
               <p>{userData.chakra_description_27_54}</p>
             </div>
           </div>
@@ -62,7 +64,7 @@ function ChakraPhases({ userData }) {
 
         {/* Third Chakra Phase: 54-81+ Years */}
         <div className="chakra-phase">
-          <h3 className='chakra-head'>54-81+ Years Old - {userData.third_chakra} - {userData.chakra_title_54_81}</h3>
+          <h3 className='chakra-head'>54-81+ Years Old - Chakra Number {userData.third_chakra} - {userData.chakra_title_54_81}</h3>
           <div className='chakra-sec'>
             <img
               src={userData.chakra_image_54_81}
@@ -70,7 +72,6 @@ function ChakraPhases({ userData }) {
               className="chakra-image"
             />
             <div>
-              <h4>{userData.chakra_title_54_81}</h4>
               <p>{userData.chakra_description_54_81}</p>
 
             </div>

@@ -6,72 +6,63 @@ import Footer from './components/Footer';
 import SectionComponent from './components/section';
 import './App.css';
 
-// Custom hook to get URL parameters
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
 };
 
 function App() {
   const [userData, setUserData] = useState({
-    marganumber:'',
-
-    first_chakra:'',
-    chakra_title_0_27:'',
-    chakra_description_0_27:'',
-    chakra_image_0_27:'',
-
-    second_chakra:'',
-    chakra_title_27_54:'',
-    chakra_description_27_54:'',
-    chakra_image_27_54:'',
-
-    third_chakra:'',
-    chakra_title_54_81:'',
-    chakra_description_54_81:'',
-    chakra_image_54_81: ''         
- 
+    marganumber: '',
+    first_chakra: '',
+    chakra_title_0_27: '',
+    chakra_description_0_27: '',
+    chakra_image_0_27: '',
+    second_chakra: '',
+    chakra_title_27_54: '',
+    chakra_description_27_54: '',
+    chakra_image_27_54: '',
+    third_chakra: '',
+    chakra_title_54_81: '',
+    chakra_description_54_81: '',
+    chakra_image_54_81: '',
   });
 
   // Fetch URL parameters using the custom hook directly in the component
   const query = useQuery();
 
   useEffect(() => {
-  // Extract the values from URL parameters
-const marganumber = query.get('marganumber') || '';
-const first_chakra = query.get('first_chakra') || '';
-const chakra_title_0_27 = query.get('chakra_title_0_27') || '';
-const chakra_description_0_27 = query.get('chakra_description_0_27') || '';
-const chakra_image_0_27 = query.get('chakra_image_0_27') || '';
+    // Extract the 'data' parameter from URL (which is Base64 encoded)
+    const encodedData = query.get('data');
 
-const second_chakra = query.get('second_chakra') || '';
-const chakra_title_27_54 = query.get('chakra_title_27_54') || '';
-const chakra_description_27_54 = query.get('chakra_description_27_54') || '';
-const chakra_image_27_54 = query.get('chakra_image_27_54') || '';
+    if (encodedData) {
+      try {
+        // Decode the Base64 encoded string
+        const decodedData = atob(encodedData);
+        
+        // Parse the decoded data back to JSON
+        const parsedData = JSON.parse(decodedData);
 
-const third_chakra = query.get('third_chakra') || '';
-const chakra_title_54_81 = query.get('chakra_title_54_81') || '';
-const chakra_description_54_81 = query.get('chakra_description_54_81') || '';
-const chakra_image_54_81 = query.get('chakra_image_54_81') || '';
-
-// Set the extracted data to state
-setUserData({
-  marganumber,
-  first_chakra,
-  chakra_title_0_27,
-  chakra_description_0_27,
-  chakra_image_0_27,
-  
-  second_chakra,
-  chakra_title_27_54,
-  chakra_description_27_54,
-  chakra_image_27_54,
-
-  third_chakra,
-  chakra_title_54_81,
-  chakra_description_54_81,
-  chakra_image_54_81,
-});
-}, []); // Add query as a dependency to the effect
+        // Set the parsed data to state
+        setUserData({
+          marganumber: parsedData.marganumber || '',
+          first_chakra: parsedData.first_chakra || '',
+          chakra_title_0_27: parsedData.chakra_title_0_27 || '',
+          chakra_description_0_27: parsedData.chakra_description_0_27 || '',
+          chakra_image_0_27: parsedData.chakra_image_0_27 || '',
+          second_chakra: parsedData.second_chakra || '',
+          chakra_title_27_54: parsedData.chakra_title_27_54 || '',
+          chakra_description_27_54: parsedData.chakra_description_27_54 || '',
+          chakra_image_27_54: parsedData.chakra_image_27_54 || '',
+          third_chakra: parsedData.third_chakra || '',
+          chakra_title_54_81: parsedData.chakra_title_54_81 || '',
+          chakra_description_54_81: parsedData.chakra_description_54_81 || '',
+          chakra_image_54_81: parsedData.chakra_image_54_81 || '',
+        });
+      } catch (error) {
+        console.error('Failed to decode or parse data:', error);
+      }
+    }
+  }, []);
 
 
   
