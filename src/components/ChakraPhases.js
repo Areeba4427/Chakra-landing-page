@@ -1,27 +1,6 @@
 import React from 'react';
 function ChakraPhases({ userData }) {
   console.log("data coming in component", userData);
-
-  // Check if userData is available and has the required properties
-  if (
-    !userData ||
-    !userData.marganumber ||
-    !userData.first_chakra ||
-    !userData.chakra_title_0_27 ||
-    !userData.chakra_description_0_27 ||
-    !userData.chakra_image_0_27 ||
-    !userData.second_chakra ||
-    !userData.chakra_title_27_54 ||
-    !userData.chakra_description_27_54 ||
-    !userData.chakra_image_27_54 ||
-    !userData.third_chakra ||
-    !userData.chakra_title_54_81 ||
-    !userData.chakra_description_54_81 ||
-    !userData.chakra_image_54_81
-  ) {
-    return <p>Loading...</p>; // Show loading text if userData is not yet available or incomplete
-  }
-
   return (
     <section className="chakra-phases">
       <h2>Your Personal Chakra Phases:</h2>

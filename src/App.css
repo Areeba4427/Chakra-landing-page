@@ -3,36 +3,36 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-
 }
 
 .App {
   text-align: center;
-  font-size: 19px;
-  color:#626262;
-
+  font-size: 1.2rem; /* Relative font size */
+  color: #626262;
 }
 
 .hero-section {
   color: white;
 }
-.hero-section h1{
-  font-size: 30px;
+
+.hero-section h1 {
+  font-size: 2.5rem;
   padding: 0;
 }
-.hero-section p{
-  font-size: 20px;
+
+.hero-section p {
+  font-size: 1.2rem;
   font-weight: 500;
 }
+
 .video-section {
   margin: 20px auto;
   width: 80%;
 }
 
-/* chakra section */
 .chakra-section {
   background: #EEEEEE;
-  margin:20px 0px;
+  margin: 20px 0;
   padding: 20px;
 }
 
@@ -45,45 +45,49 @@ body {
 .chakra-grid div {
   background: transparent;
 }
-.chakra-phase{
-  margin: 2% auto; /* Optional: Center the container itself if it's not full width */
+
+.chakra-phase {
+  margin: 2% auto;
 }
-.chakra-phases h2{
-  font-size: 48px;
-  color:#333333;
+
+.chakra-phases h2 {
+  font-size: 2.5rem;
+  color: #333333;
 }
 
 .chakra-sec {
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: space-between; /* Center horizontally */
-  width: 70%;
-  margin: 0% auto; /* Optional: Center the container itself if it's not full width */
+  flex-wrap: wrap; /* Ensure flexibility on small screens */
+  align-items: center;
+  justify-content: space-between;
+  width: 90%; /* Increase for smaller screens */
+  margin: 0 auto;
 }
 
-.chakra-head{
-  color:#333333;
-  font-size: 32px;
+.chakra-head {
+  color: #333333;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 100%;
   letter-spacing: -0.025rem;
   padding: 0;
-  margin: 0%;
-}
-.chakra-image-main{
-  width: 45%;
-}
-.chakra-image{
-  width: 15%;
-  height: 15%;
-  padding: 0px 20px;
+  margin: 0;
 }
 
-.chakra-sec p{
-font-size: 26px;
-text-align: left;
+.chakra-image-main {
+  width: 45%;
 }
-/* Hero */
+
+.chakra-image {
+  width: 15%;
+  height: 15%;
+  padding: 0 20px;
+}
+
+.chakra-sec p {
+  font-size: 1.5rem;
+  text-align: left;
+}
 
 .header {
   text-align: center;
@@ -91,76 +95,73 @@ text-align: left;
 
 .hero-section {
   padding: 20px;
-  position: relative;
   background-image: url('https://storage.mlcdn.com/account_image/1013434/vAqsLgVkDbh0MDheynlLH0z5Jjou6mLBH8Nw2N2G.png');
   background-size: cover;
-  background-position: center; 
+  background-position: center;
   opacity: 1;
-  padding: 2% 0; 
   height: 400px;
 }
 
-.second-hero{
+.second-hero {
   padding: 20px;
-  position: relative;
   background-image: url('https://storage.mlcdn.com/account_image/1013434/Aqngt0shhhp974HBQV81wHzaEuDIPyyBDe2v6zyW.png');
   background-size: cover;
   opacity: 1;
-  padding: 2% 0; 
   height: auto;
 }
 
 .header-image {
   padding-top: 50px;
   width: 27%;
-  object-fit: cover; /* Makes sure the image covers the area nicely */
+  object-fit: cover;
 }
 
 .hero-section h1 {
-  font-size: 2.8rem;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Make text stand out */
-}
-.hero-section p {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.bold{
+.hero-section p {
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.bold {
   font-weight: 600;
 }
+
 .video-section {
   margin-top: 30px;
   padding: 20px;
-  background-color: #fff; /* Add a background color */
+  background-color: #fff;
 }
 
 .text-section {
-  width: 70%;
-  margin: 0 auto; /* Centers the entire section horizontally */
-  text-align: center; /* Centers the text inside the <p> tags */
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .text-section p {
-  margin-bottom: 16px; /* Optional: Adds space between paragraphs */
-  font-size: 1.3rem;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
 }
 
-/* SectionComponent.css */
-/* SectionComponent.css */
 .section-component {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
+ 
   margin-bottom: 40px;
-  width: 80%;
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image-container {
-  flex: 1;
+  flex: 1 1 100%; /* Make responsive */
 }
 
 .section-image {
@@ -170,34 +171,33 @@ text-align: left;
 }
 
 .text-container {
-  flex: 1;
+  flex: 1 1 100%; /* Responsive */
   padding-left: 20px;
 }
 
 .text-container h2 {
-  font-size: 2em;
+  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
 .text-container p {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   line-height: 1.6;
 }
 
-
-/* Footer section */
 .footer {
   background-color: #333;
   color: white;
   padding: 20px;
   text-align: center;
 }
+
 .footer-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; /* Vertical centering */
+  align-items: center;
   padding: 20px;
-  position: relative;
   background-image: url('https://storage.mlcdn.com/account_image/1013434/IOFzzRBhIXFuHu1FngSqHakzKOxJqNmc0Xl9q3I0.jpg');
   background-size: cover;
   background-position: center;
@@ -206,15 +206,62 @@ text-align: left;
 }
 
 .footer-p {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Vertical centering */
-  align-items: center; /* Horizontal centering */
   max-width: 60%;
   text-align: center;
 }
 
 .footer-section .footer-p p {
-  font-size: 30px;
+  font-size: 1.8rem;
   color: #f9f9f9;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 1024px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .chakra-sec {
+    width: 90%;
+  }
+
+  .text-section, .section-component {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .chakra-sec {
+    flex-direction: column;
+  }
+
+  .chakra-image-main, .chakra-image {
+    width: 100%;
+  }
+
+  .header-image {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p, .chakra-sec p {
+    font-size: 1rem;
+  }
+
+  .footer-section .footer-p p {
+    font-size: 1.2rem;
+  }
+
+  .chakra-phases h2 {
+    font-size: 2rem;
+  }
 }
