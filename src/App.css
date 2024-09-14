@@ -57,10 +57,10 @@ body {
 
 .chakra-sec {
   display: flex;
-  flex-wrap: wrap; /* Ensure flexibility on small screens */
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 90%; /* Increase for smaller screens */
+  width: 60%; /* Increase for smaller screens */
   margin: 0 auto;
 }
 
@@ -235,16 +235,33 @@ body {
     font-size: 1.8rem;
   }
 
+  
+.footer-p {
+  max-width: 90%;
+}
+.footer-section .footer-p p{
+  
+  font-size: 16px;
+}
   .chakra-sec {
     flex-direction: column;
   }
 
-  .chakra-image-main, .chakra-image {
-    width: 100%;
+   .chakra-image {
+    width: 50%;
+  }
+  .chakra-image-main{
+    width: 90%;
   }
 
   .header-image {
-    width: 50%;
+    width: 70%;
+  }
+  .text-section, .section-component{
+    flex-direction: column;
+  }
+  .chakra-head {
+    font-size: 1.2rem;
   }
 }
 
@@ -257,10 +274,11 @@ body {
     font-size: 1rem;
   }
 
-  .footer-section .footer-p p {
-    font-size: 1.2rem;
+  .text-container{
+    padding: 0;
+    width: 90%;
+    text-align: justify;
   }
-
   .chakra-phases h2 {
     font-size: 2rem;
   }

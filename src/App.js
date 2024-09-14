@@ -27,44 +27,18 @@ function App() {
     chakra_image_54_81: '',
   });
 
-  // Fetch URL parameters using the custom hook directly in the component
   const query = useQuery();
 
   useEffect(() => {
-    // Extract the 'data' parameter from URL (which is Base64 encoded)
-    const encodedData = query.get('data');
-
-    if (encodedData) {
-      try {
-        // Decode the Base64 encoded string
-        const decodedData = atob(encodedData);
-        
-        // Parse the decoded data back to JSON
-        const parsedData = JSON.parse(decodedData);
-
-        // Set the parsed data to state
-        setUserData({
-          marganumber: parsedData.marganumber || '',
-          first_chakra: parsedData.first_chakra || '',
-          chakra_title_0_27: parsedData.chakra_title_0_27 || '',
-          chakra_description_0_27: parsedData.chakra_description_0_27 || '',
-          chakra_image_0_27: parsedData.chakra_image_0_27 || '',
-          second_chakra: parsedData.second_chakra || '',
-          chakra_title_27_54: parsedData.chakra_title_27_54 || '',
-          chakra_description_27_54: parsedData.chakra_description_27_54 || '',
-          chakra_image_27_54: parsedData.chakra_image_27_54 || '',
-          third_chakra: parsedData.third_chakra || '',
-          chakra_title_54_81: parsedData.chakra_title_54_81 || '',
-          chakra_description_54_81: parsedData.chakra_description_54_81 || '',
-          chakra_image_54_81: parsedData.chakra_image_54_81 || '',
-        });
-      } catch (error) {
-        console.error('Failed to decode or parse data:', error);
-      }
+    // Get all query parameters and update the state dynamically
+    const updatedUserData = {};
+    for (const [key, value] of query.entries()) {
+      updatedUserData[key] = value || '';
     }
-  }, []);
+    setUserData(prevData => ({ ...prevData, ...updatedUserData }));
+  }, [query]);
 
-
+  console.log("userData", userData);
   
   return (
     <div className="App">

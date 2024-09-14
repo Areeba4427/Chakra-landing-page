@@ -21,7 +21,7 @@ function Header() {
       <div className="video-section">
         <iframe
           width="100%"
-          height="515"
+          height="815"
           src="https://www.youtube.com/embed/0Nk-p2GeHu4"
           title="Video title"
           frameBorder="0"
