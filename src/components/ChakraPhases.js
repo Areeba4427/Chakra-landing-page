@@ -13,7 +13,15 @@ function ChakraPhases({ userData }) {
     return () => clearTimeout(timer);
   }, []);
 
-  console.log("data coming in component", userData);
+
+  function getChakraSuffix(chakraNumber) {
+    if (chakraNumber === 1) return `${chakraNumber}st`;
+    if (chakraNumber === 2) return `${chakraNumber}nd`;
+    if (chakraNumber === 3) return `${chakraNumber}rd`;
+    return `${chakraNumber}th`;
+}
+
+
 
   return (
     <section className="chakra-phases">
@@ -29,7 +37,7 @@ function ChakraPhases({ userData }) {
         <div className="chakra-grid">
           <div className="chakra-phase">
             <h3 className='chakra-head'>
-              0-27 Years Old - Chakra Number {userData.first_chakra} - {userData.chakra_title_0_27}
+              0-27 Years Old - {getChakraSuffix(userData.first_chakra)} Chakra - {userData.chakra_title_0_27}
             </h3>
             <div className='chakra-sec'>
               <img
@@ -46,7 +54,7 @@ function ChakraPhases({ userData }) {
           {/* Second Chakra Phase */}
           <div className="chakra-phase">
             <h3 className='chakra-head'>
-              27-54 Years Old - Chakra Number {userData.second_chakra} - {userData.chakra_title_27_54}
+              27-54 Years Old - {getChakraSuffix(userData.second_chakra)} Chakra - {userData.chakra_title_27_54}
             </h3>
             <div className='chakra-sec'>
               <img
@@ -63,7 +71,7 @@ function ChakraPhases({ userData }) {
           {/* Third Chakra Phase */}
           <div className="chakra-phase">
             <h3 className='chakra-head'>
-              54-81+ Years Old - Chakra Number {userData.third_chakra} - {userData.chakra_title_54_81}
+              54-81+ Years Old - {getChakraSuffix(userData.third_chakra)} Chakra - {userData.chakra_title_54_81}
             </h3>
             <div className='chakra-sec'>
               <img

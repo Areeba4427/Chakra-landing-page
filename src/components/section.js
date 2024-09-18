@@ -9,7 +9,7 @@ const SectionComponent = ({ imageSrc, title, text }) => {
       </div>
       <div className="text-container">
         <h2>{title}</h2>
-        <p>{text}</p>
+        <p dangerouslySetInnerHTML={{ __html: text }}></p>
       </div>
     </div>
   );

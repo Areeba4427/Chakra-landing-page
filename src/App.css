@@ -1,8 +1,19 @@
+:root {
+  --G-p-font-weight: 400;
+  --G-p-line-height: 100%;
+  --font-family: "Arial", "Helvetica", sans-serif;
+}
+
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: var(--font-family);
+}
+p{
+  color:#626262;
 }
 
 .App {
@@ -16,15 +27,19 @@ body {
 }
 
 .hero-section h1 {
-  font-size: 2.5rem;
+  font-size: 48px;
   padding: 0;
+  margin-bottom: .75rem;
 }
 
 .hero-section p {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
+.strong{
+  font-weight: 600;
+}
 .video-section {
   margin: 20px auto;
   width: 80%;
@@ -60,13 +75,15 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 60%; /* Increase for smaller screens */
+  width: 70%; /* Increase for smaller screens */
   margin: 0 auto;
 }
-
+.chakra-sec div{
+  max-width: 70%;
+}
 .chakra-head {
   color: #333333;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 100%;
   letter-spacing: -0.025rem;
@@ -85,7 +102,7 @@ body {
 }
 
 .chakra-sec p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-align: left;
 }
 
@@ -95,7 +112,7 @@ body {
 
 .hero-section {
   padding: 20px;
-  background-image: url('https://storage.mlcdn.com/account_image/1013434/vAqsLgVkDbh0MDheynlLH0z5Jjou6mLBH8Nw2N2G.png');
+  background-image: url('https://storage.mlcdn.com/account_image/1013434/frp6gJCtcQWlBTZqEr84LnQAIrjCte4q2IXsquI8.png');
   background-size: cover;
   background-position: center;
   opacity: 1;
@@ -123,21 +140,18 @@ body {
 }
 
 .hero-section p {
-  font-size: 1.2rem;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.bold {
-  font-weight: 600;
-}
 
 .video-section {
   margin-top: 30px;
-  padding: 20px;
-  background-color: #fff;
 }
 
+.video{
+  height:600px
+}
 .text-section {
   width: 90%;
   margin: 0 auto;
@@ -146,20 +160,28 @@ body {
 
 .text-section p {
   margin-bottom: 16px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  font-weight: var(--G-p-font-weight);
+  line-height: var(--G-p-line-height);
 }
+
+.text-section p.bold {
+  font-weight: 650;
+}
+
 
 .section-component {
   display: flex;
   align-items: center;
-  justify-content: center;
- 
+  justify-content: space-between;
   margin-bottom: 40px;
-  width: 90%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
-
+.section-component div{
+  max-width: 47%;
+}
 .image-container {
   flex: 1 1 100%; /* Make responsive */
 }
@@ -173,6 +195,8 @@ body {
 .text-container {
   flex: 1 1 100%; /* Responsive */
   padding-left: 20px;
+  text-align: left;
+  padding: 0 15px;
 }
 
 .text-container h2 {
@@ -181,7 +205,7 @@ body {
 }
 
 .text-container p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 1.6;
 }
 
@@ -198,7 +222,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-image: url('https://storage.mlcdn.com/account_image/1013434/IOFzzRBhIXFuHu1FngSqHakzKOxJqNmc0Xl9q3I0.jpg');
+  background-image: url('https://storage.mlcdn.com/account_image/1013434/f5riCfxJHa3aWmIDflNP41XRtVA2ZllhgVoqjgxB.png');
   background-size: cover;
   background-position: center;
   opacity: 1;
@@ -206,7 +230,7 @@ body {
 }
 
 .footer-p {
-  max-width: 60%;
+  max-width: 80%;
   text-align: center;
 }
 
@@ -222,26 +246,50 @@ body {
   }
 
   .chakra-sec {
-    width: 90%;
+    width: 95%;
   }
 
   .text-section, .section-component {
     width: 100%;
   }
+  .video{
+    height:400px
+  }
+  
+.hero-section {
+  height: 350px;
+}
+.hero-section h1 {
+  font-size: 2.6rem;
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+}
+
+
+
+
 }
 
 @media (max-width: 768px) {
   .hero-section h1 {
     font-size: 1.8rem;
   }
+  .section-component div {
+    max-width: 90%;
+}
+.hero-section {
+  height: 300px;
+}
 
   
 .footer-p {
   max-width: 90%;
 }
 .footer-section .footer-p p{
-  
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.5; 
 }
   .chakra-sec {
     flex-direction: column;
@@ -263,6 +311,9 @@ body {
   .chakra-head {
     font-size: 1.2rem;
   }
+  .chakra-sec div {
+    max-width: 90%;
+}
 }
 
 @media (max-width: 480px) {
@@ -270,14 +321,22 @@ body {
     font-size: 1.5rem;
   }
 
+  
+.hero-section {
+  height: 270px;
+}
+
+  .video{
+    height:300px
+  }
   .hero-section p, .chakra-sec p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .text-container{
     padding: 0;
     width: 90%;
-    text-align: justify;
+    text-align: center;
   }
   .chakra-phases h2 {
     font-size: 2rem;
